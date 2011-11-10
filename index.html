@@ -133,20 +133,41 @@
     <h1>Working with Git</h1>
 </section>
 
-<section>
+<section class="slide" id="git-working">
     <h2>Starting</h2>
     <p>
     Let's start with Git. We'll start assuming you already have Git installed (we'll review how to install &amp; setup Git in different OS's).
     </p>
     <p>
     With your machine ready you've been assigned to get the repository (repo from now on) of the latest project everyone is working on.
-    All you have are the company police of storing the projects on the Projects directory in each user's home directory and the location of the repo: git@replayful.info/new-project.git
+    All you have are the company police of storing the projects on the Projects directory in each user's home directory and the location of the repo: git@github.com:nemesys101/Git-workshop.git
     </p>
-    <pre class="brush: bash">
-    me@local:~/Projects/ $
+    <pre class="brush: bash; class-name: 'code-extra-styles'">
+    me@local:~/$ cd Projects
+    me@local:~/Projects/$ git clone git@github.com:nemesys101/Git-workshop.git
+    Cloning into Git-workshop...
+    remote: Counting objects: 82, done.
+    remote: Compressing objects: 100% (67/67), done.
+    remote: Total 82 (delta 12), reused 81 (delta 11)
+    Receiving objects: 100% (82/82), 160.71 KiB | 81 KiB/s, done.
+    Resolving deltas: 100% (12/12), done.
+    me@local:~/Projects/$ ls
+    Git-workshop
+    me@local:~/Projects/$ cd Git-workshop
+    me@local:~/Projects/Git-workshop (master)$ ls
+    css  deck.js  images  index.html  syntaxhighlighter
     </pre>
+    We got it! We have the repo and the code. We also have a (master) thing. <br>
+    The (master) is the branch we're currently standing on.
 </section>
 
+<section class="slide" id="git-working-">
+    <p>At this point you hear that some changes have been pushed to master and that you need to start working on the README</p>
+    <pre class="brush: bash; class-name: 'code-extra-styles'">
+    me@local:~/Projects/Git-workshop (master)$ git pull origin master
+
+    </pre>
+</section>
 
 <!-- End Slides -->
 

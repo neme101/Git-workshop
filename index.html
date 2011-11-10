@@ -24,8 +24,10 @@
     <!-- Theme CSS files (menu swaps these out) -->
     <link rel="stylesheet" id="style-theme-link" href="deck.js/themes/style/web-2.0.css">
     <link rel="stylesheet" id="transition-theme-link" href="deck.js/themes/transition/horizontal-slide.css">
-    
-    
+    <link rel="stylesheet" type="text/css" href="syntaxhighlighter/shCore.css">
+    <link rel="stylesheet" type="text/css" href="syntaxhighlighter/shCoreRDark.css">
+    <link rel="stylesheet" type="text/css" href="syntaxhighlighter/shThemeRDark.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">    
     <script src="deck.js/modernizr.custom.js"></script>
 </head>
 
@@ -38,7 +40,7 @@
 </section>
 
 <section class="slide" id="git-history">
-    <h1>Git History</h1>
+    <h2>Git History</h1>
     <p>
         Git was born from the Linux Kernel project. For most of the Linux kernel maintenance (1991-2002) they were just using archived files and passing patches. Later (2002) they started using a proprietary DVCS (yes they needed a distributed system) called BitKeeper.
     </p>
@@ -61,10 +63,7 @@
 </section>
 
 <section class="slide" id="git-vs-svn-intro">
-    <h2>Git vs SVN</h2>
-    <p>
-        This isn't a stand-off, the "vs" here stands for comparison. The idea is to show the main differences between Git and SVN for the ones who already know how to work with SVN
-    </p>
+    <h1>Git vs SVN</h1>
 </section>
 
 <section class="slide" id="git-vs-svn-basics">
@@ -130,6 +129,25 @@
     </p>
 </section>
 
+<section class="slide" id="git-working">
+    <h1>Working with Git</h1>
+</section>
+
+<section>
+    <h2>Starting</h2>
+    <p>
+    Let's start with Git. We'll start assuming you already have Git installed (we'll review how to install &amp; setup Git in different OS's).
+    </p>
+    <p>
+    With your machine ready you've been assigned to get the repository (repo from now on) of the latest project everyone is working on.
+    All you have are the company police of storing the projects on the Projects directory in each user's home directory and the location of the repo: git@replayful.info/new-project.git
+    </p>
+    <pre class="brush: bash">
+    me@local:~/Projects/ $
+    </pre>
+</section>
+
+
 <!-- End Slides -->
 
 <!-- Start Navigation -->
@@ -163,9 +181,13 @@
 <script src="deck.js/extensions/goto/deck.goto.js"></script>
 <script src="deck.js/extensions/status/deck.status.js"></script>
 <script src="deck.js/extensions/navigation/deck.navigation.js"></script>
-
+<script type="text/javascript" src="syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="syntaxhighlighter/shBrushBash.js"></script>
 <script type="text/javascript">
-    $.deck('.slide');
+    $(document).ready(function() {
+        $.deck('.slide');
+        SyntaxHighlighter.all()
+    });
 </script>
 </body>
 </html>
